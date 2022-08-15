@@ -1,0 +1,52 @@
+DB schema
+
+LOGIN TABLE
+
+create table login(
+username varchar(255) NOT NULL,
+password varchar(255),
+PRIMARY KEY (username)
+);
+
+
+FLIGHT DETAILS TABLE
+
+CREATE TABLE flight_details(
+airlinename varchar(255), 
+price double, 
+flight_no varchar(12), 
+source_city varchar(255), 
+destination_city varchar(255), 
+dep_time_from_source DATE, 
+arr_time_to_destination DATE, 
+total_seats int, 
+booked_seats int, 
+seat_availability int, 
+date_of_travel DATE, 
+class varchar(255)
+);
+
+
+REGISTER DETAILS TABLE
+
+CREATE TABLE register_details(
+  full_name varchar(255),
+  address varchar(255),
+   age int(3),
+   mobile int(10),
+   email_id varchar(255) NOT NULL,
+   identification varchar(255) NOT NULL,
+   country varchar(255) NOT NULL,
+   PRIMARY KEY(EMAIL_ID)
+);
+
+BOOKING DETAILS TABLE
+
+CREATE TABLE booking_details (
+email_id varchar(255) NOT NULL,
+booking_id varchar(10) NOT NULL,
+flight_no varchar(12) NOT NULL,
+PRIMARY KEY(booking_id)
+);
+
+
