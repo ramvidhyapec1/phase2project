@@ -11,7 +11,7 @@ PRIMARY KEY (username)
 
 FLIGHT DETAILS TABLE
 
-CREATE TABLE flight_details(
+CREATE TABLE flightdetails(
 airlinename varchar(255), 
 price double, 
 flight_no varchar(12), 
@@ -23,7 +23,7 @@ total_seats int,
 booked_seats int, 
 seat_availability int, 
 date_of_travel DATE, 
-class varchar(255)
+flight_class varchar(255)
 );
 
 
