@@ -12,14 +12,20 @@
 <body>
 This is the login page
 
+<%
+  if (request.getParameter("error") != null)
+          out.println("<b>Your username or password is invalid. Try again</b><br>");
+%>
 <h1>Fly Away Application</h1>
 <form action="sessionhandling.jsp" method="post">
-<button onclick="Adminlogin.jsp">Admin Login</button>
-<button>User login</button>
-User name <input type="email" name="uname" id="uname">
-Password <input type="password" name="pword" id="pword">
+User name <input type="email" required="required" name="uname" id="uname">
+Password <input type="password" required="required" name="pword" id="pword">
 <button>Submit</button>
+
+
 </form>
+
+
 
 	
  

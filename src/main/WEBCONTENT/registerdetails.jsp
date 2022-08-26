@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.io.*,java.util.*, com.mysql.jdbc.Driver"%>  
+<%@ page import="jakarta.servlet.http.*,jakarta.servlet.*" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%> 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +12,12 @@
 <title>Register Details page</title>
 </head>
 <body>
+<%
+String flightno=session.getAttribute("flightno").toString();
+int flightnum=Integer.parseInt(flightno);
+out.println(flightnum);
+%>
+
 <form action="review.jsp" method="post">
 Full Name 			<input type="text" name="fn" id="fn"/><br>
 Address 			<input type="text" name="address" id="address"/><br>

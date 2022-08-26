@@ -9,4 +9,24 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AdminchangePassword</display-name>
+    <servlet-name>AdminchangePassword</servlet-name>
+    <servlet-class>com.flyaway.AdminchangePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminchangePassword</servlet-name>
+    <url-pattern>/AdminchangePassword</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>checkpassword</display-name>
+    <servlet-name>checkpassword</servlet-name>
+    <servlet-class>com.flyaway.checkpassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkpassword</servlet-name>
+    <url-pattern>/checkpassword</url-pattern>
+  </servlet-mapping>
 </web-app>
