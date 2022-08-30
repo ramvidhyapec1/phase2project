@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+String flightno=session.getAttribute("flightno").toString();
+int flightnum=Integer.parseInt(flightno);
+out.println(flightnum);
+%>
 
 
+onclick="location.href=this.href+''?flightno='+flightno;return false"
 
 <input type="hidden" name="selected_flight_no" id="selected_flight_no" value="${row.flight_no}"/>
 <c:set var="username" value="${row.username}"/>

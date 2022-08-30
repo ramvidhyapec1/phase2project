@@ -12,11 +12,7 @@
 <title>Register Details page</title>
 </head>
 <body>
-<%
-String flightno=session.getAttribute("flightno").toString();
-int flightnum=Integer.parseInt(flightno);
-out.println(flightnum);
-%>
+
 
 <form action="review.jsp" method="post">
 Full Name 			<input type="text" name="fn" id="fn"/><br>

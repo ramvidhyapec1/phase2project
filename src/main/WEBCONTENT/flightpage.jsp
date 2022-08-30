@@ -21,10 +21,10 @@
      user="root"  password="root"/>
 
    
-<c:set var="sourceCity" scope="page" value="${param.sc}" />
-<c:set var="destinationCity" scope="page" value="${param.dc}" />
-<c:set var="datOfTravel" scope="page" value="${param.dot}" />
-<c:set var="noOfPassangers" scope="page" value="${param.nop}"/>
+<c:set var="sourceCity" scope="session" value="${param.sc}" />
+<c:set var="destinationCity" scope="session" value="${param.dc}" />
+<c:set var="datOfTravel" scope="session" value="${param.dot}" />
+<c:set var="noOfPassangers" scope="session" value="${param.nop}"/>
 
 <fmt:parseDate value="${datOfTravel}" pattern="yyyy-MM-dd" var="parsedDateOfTravel"/>
 <fmt:formatDate value="${parsedDateOfTravel}" pattern="yyyy-MM-dd" var="formattedDatOfTravel" />
@@ -51,14 +51,17 @@
 <th>Date of Travel</th>
 <th>Flight class</th>  
 </tr>  
-	<c:forEach var="row" items="${rs.rows}">  
+
+	<c:forEach var="row" items="${rs.rows}" >
+	
+  <c:set var="i" value="1"/>
 		<tr>  
 			<td><c:out value="${row.airlinename}"/></td>  
 			<td><c:out value="${row.price}"/></td>  
 			 
 			<td>
-			
-			<a href="registerdetails.jsp" hidden="" onclick="location.href=this.href+''?flightno='+flightno;return false"><c:out value="${row.flight_no}"/> 
+			<a href="registerdetails.jsp"><c:out value="${row.flight_no}"/> 
+			<c:set var="flightno[i]" value="${row.flight_no}"/>
 			
 			</a> 
 			</td>
